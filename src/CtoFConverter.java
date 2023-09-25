@@ -10,14 +10,12 @@ public class CtoFConverter {
         do {
             System.out.println("What is the temperature in C? ");
             if (input.hasNextDouble()){
-
                 // OK safe to read in a double
                 c = input.nextDouble();
             input.nextLine(); // clears the newline from the buffer
             done = true;  // because we got a valid number we can end the loop
                 f = (c * 1.8) + 32;
                 System.out.println("This is the temperature in F: " + f);
-
             }
         else
         {
