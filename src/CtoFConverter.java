@@ -21,11 +21,11 @@ public class CtoFConverter {
         {
             // Not a double can’t use nextDouble() read as String with nextLine() instead
             trash = input.nextLine();
-            System.out.println("You said the temp was" + trash);
+            System.out.println("You said the temp was " + trash);
             System.out.println("Which is invalid");
         }
 
 
-    }while (false);
+    }while (true);
     }
 }

@@ -31,7 +31,7 @@ public class MetricConverter {
             System.out.println("Meters to Inches: " + inches);
 
 
-        } while (false);
+        } while (true);
 
 
     }

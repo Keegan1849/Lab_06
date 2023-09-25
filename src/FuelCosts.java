@@ -66,6 +66,6 @@ public class FuelCosts {
             System.out.println("You have this: " + mLeft + " many miles left");
 
 
-        } while (false);
+        } while (true);
     }
 }
