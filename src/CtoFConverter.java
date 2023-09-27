@@ -1,4 +1,3 @@
-import java.util.Objects;
 import java.util.Scanner;
 public class CtoFConverter {
     public static void main(String[] args) {
@@ -7,9 +6,8 @@ public class CtoFConverter {
         double f;
         String trash = ""; // use for bad input which will read as a String
         boolean done = false;
-        String hi = "";
+        boolean again = false;
 
-        boolean stop = false;
         do {
             System.out.println("What is the temperature in C? ");
             if (input.hasNextDouble()) {
@@ -26,9 +24,14 @@ public class CtoFConverter {
                 System.out.println("Which is invalid");
             }
 
+            System.out.print("Do you want to keep going? (Y/N): ");
+            String keepG = input.nextLine().trim().toLowerCase();
+            if (!keepG.equals("y")) {
+                again = true;
+            }
 
 
 
-        } while (!false);
+        } while (!again);
     }
 }

@@ -7,6 +7,8 @@ public class MetricConverter {
         double inches = 0.0;
         String trash = ""; // use for bad input which will read as a String
         boolean done = false;
+        boolean again = false;
+
         Scanner input = new Scanner(System.in);
 
         do {
@@ -31,7 +33,13 @@ public class MetricConverter {
             System.out.println("Meters to Inches: " + inches);
 
 
-        } while (true);
+            System.out.print("Do you want to keep going? (Y/N): ");
+            String keepG = input.nextLine().trim().toLowerCase();
+            if (!keepG.equals("y")) {
+                again = true;
+            }
+
+        } while (!again);
 
 
     }

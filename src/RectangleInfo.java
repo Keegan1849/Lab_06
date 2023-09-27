@@ -8,10 +8,12 @@ public class RectangleInfo {
         int diagonal = 0;
         String trash = ""; // use for bad input which will read as a String
         boolean done = false;
+        boolean again = false;
+
 
 
         do {
-            System.out.println("What is the Legth? ");
+            System.out.println("What is the Length? ");
             if (input.hasNextDouble()) {
                 // OK safe to read in a double
                 length = input.nextInt();
@@ -44,8 +46,12 @@ public class RectangleInfo {
             System.out.println("The diagonal is " + diagonal);
 
 
+            System.out.print("Do you want to keep going? (Y/N): ");
+            String keepG = input.nextLine().trim().toLowerCase();
+            if (!keepG.equals("y")) {
+                again = true;
+            }
 
-
-        }while(true);
+        }while(!again);
     }
 }
